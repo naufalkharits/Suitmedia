@@ -21,7 +21,7 @@ const Hero = () => {
                     DIGITAL CHEMISTRY
                 </div>
                 <img
-                    className="h-96 w-full object-cover object-center"
+                    className="h-96 w-full object-cover object-center xl:h-[28rem] 2xl:h-[30rem] 3xl:h-[32rem]"
                     src={bg}
                     alt=""
                 />

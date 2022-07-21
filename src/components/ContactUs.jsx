@@ -18,16 +18,17 @@ const ContactUs = () => {
     })
 
     return (
-        <div>
+        <div className="container mx-auto mt-16 px-4">
             <h2 className="text-center text-xl font-bold">CONTACT US</h2>
-            <form className="flex flex-col items-center" action="">
+            <form className="mx-auto mt-4 w-full space-y-4 sm:w-fit">
                 {/* name input */}
-                <label>
-                    <div>Name</div>
+                <label className="block space-y-1">
+                    <div className="font-medium">Name</div>
                     <input
-                        className="w-64 border border-zinc-300 p-2"
-                        name="name"
+                        className="w-full border border-zinc-300 p-2 sm:w-96"
                         type="text"
+                        name="name"
+                        value={formValue.name}
                         onChange={(e) => {
                             setFormValue({
                                 ...formValue,
@@ -48,12 +49,13 @@ const ContactUs = () => {
                 </label>
 
                 {/* email input */}
-                <label>
-                    <div>Email</div>
+                <label className="block space-y-1">
+                    <div className="font-medium">Email</div>
                     <input
-                        className="w-64 border border-zinc-300 p-2"
-                        name="email"
+                        className="w-full border border-zinc-300 p-2 sm:w-96"
                         type="text"
+                        name="email"
+                        value={formValue.email}
                         onChange={(e) => {
                             setFormValue({
                                 ...formValue,
@@ -74,12 +76,13 @@ const ContactUs = () => {
                 </label>
 
                 {/* message input */}
-                <label>
-                    <div>Message</div>
+                <label className="block space-y-1">
+                    <div className="font-medium">Message</div>
                     <textarea
-                        className="w-64 border border-zinc-300 p-2"
-                        name="message"
+                        className="w-full border border-zinc-300 p-2 sm:w-96"
                         type="text"
+                        name="message"
+                        value={formValue.message}
                         onChange={(e) => {
                             setFormValue({
                                 ...formValue,
@@ -98,6 +101,19 @@ const ContactUs = () => {
                         </div>
                     )}
                 </label>
+                <button
+                    className="w-full bg-suit-blue p-2 text-white disabled:bg-zinc-500"
+                    disabled={
+                        !formValue.name ||
+                        !formValue.email ||
+                        !formValue.message ||
+                        showError.name ||
+                        showError.email ||
+                        showError.message
+                    }
+                >
+                    SUBMIT
+                </button>
             </form>
         </div>
     )
