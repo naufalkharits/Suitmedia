@@ -102,7 +102,7 @@ const ContactUs = () => {
                     )}
                 </label>
                 <button
-                    className="w-full bg-suit-blue p-2 text-white disabled:bg-zinc-400"
+                    className="w-full bg-suit-blue p-2 font-medium text-white disabled:bg-zinc-400"
                     disabled={
                         !formValue.name ||
                         !formValue.email ||
