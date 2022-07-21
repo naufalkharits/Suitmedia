@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react"
 import { Menu, Transition } from "@headlessui/react"
+import MobileMenu from "./MobileMenu"
 
 const Navbar = () => {
     const [isShowing, setIsShowing] = useState(false)
@@ -8,10 +9,10 @@ const Navbar = () => {
         <nav className="container mx-auto flex items-center justify-between">
             <div className="cursor-pointer p-4 text-xl font-bold">Company</div>
             <div className="hidden items-center gap-4 md:flex [&>span]:cursor-pointer [&>span]:p-4 [&>span]:font-medium">
-                <Menu as="div" className="relative z-10 hidden sm:inline-block">
+                <Menu as="div" className="relative z-20">
                     <Transition
-                        show={isShowing}
                         as={Fragment}
+                        show={isShowing}
                         enter="transition ease-out duration-100"
                         enterFrom="transform opacity-0 scale-95"
                         enterTo="transform opacity-100 scale-100"
@@ -45,6 +46,7 @@ const Navbar = () => {
                 <span className="hover:bg-zinc-100">OUR TEAM</span>
                 <span className="hover:bg-zinc-100">CONTACT</span>
             </div>
+            <MobileMenu />
         </nav>
     )
 }

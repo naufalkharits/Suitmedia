@@ -25,7 +25,7 @@ const ContactUs = () => {
                 <label className="block space-y-1">
                     <div className="font-medium">Name</div>
                     <input
-                        className="w-full border border-zinc-300 p-2 sm:w-96"
+                        className="w-full border border-zinc-300 p-2 sm:w-96 lg:w-[30rem]"
                         type="text"
                         name="name"
                         value={formValue.name}
@@ -52,7 +52,7 @@ const ContactUs = () => {
                 <label className="block space-y-1">
                     <div className="font-medium">Email</div>
                     <input
-                        className="w-full border border-zinc-300 p-2 sm:w-96"
+                        className="w-full border border-zinc-300 p-2 sm:w-96 lg:w-[30rem]"
                         type="text"
                         name="email"
                         value={formValue.email}
@@ -79,7 +79,7 @@ const ContactUs = () => {
                 <label className="block space-y-1">
                     <div className="font-medium">Message</div>
                     <textarea
-                        className="w-full border border-zinc-300 p-2 sm:w-96"
+                        className="w-full border border-zinc-300 p-2 sm:w-96 lg:w-[30rem]"
                         type="text"
                         name="message"
                         value={formValue.message}
@@ -102,7 +102,7 @@ const ContactUs = () => {
                     )}
                 </label>
                 <button
-                    className="w-full bg-suit-blue p-2 text-white disabled:bg-zinc-500"
+                    className="w-full bg-suit-blue p-2 text-white disabled:bg-zinc-400"
                     disabled={
                         !formValue.name ||
                         !formValue.email ||

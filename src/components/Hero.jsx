@@ -16,7 +16,7 @@ const Hero = () => {
             pagination={{ clickable: true }}
         >
             <SwiperSlide className="relative">
-                <div className="absolute bottom-24 left-4 hidden w-[30rem] bg-black bg-opacity-50 p-2 text-xl font-bold text-white md:left-8 md:block lg:left-16 xl:left-32 2xl:left-64">
+                <div className="absolute left-4 bottom-16 block w-96 bg-black bg-opacity-50 p-2 font-bold text-white md:bottom-24 md:left-8 md:w-[30rem] md:text-xl lg:left-16 xl:left-32 2xl:left-64">
                     THIS IS A PLACE WHERE TECHNOLOGY & CREATIVITY FUSED INTO
                     DIGITAL CHEMISTRY
                 </div>
@@ -27,7 +27,7 @@ const Hero = () => {
                 />
             </SwiperSlide>
             <SwiperSlide className="relative">
-                <div className="absolute bottom-24 left-4 hidden w-[30rem] bg-black bg-opacity-50 p-2 text-xl font-bold text-white md:left-8 md:block lg:left-16 xl:left-32 2xl:left-64">
+                <div className="absolute bottom-16 block w-96 bg-black bg-opacity-50 p-2 font-bold text-white md:bottom-24 md:left-8 md:w-[30rem] md:text-xl lg:left-16 xl:left-32 2xl:left-64">
                     WE DON'T HAVE THE BEST BUT WE HAVE THE GRATEST TEAM
                 </div>
                 <img
