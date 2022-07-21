@@ -1,6 +1,9 @@
 import { useState } from "react"
-import { emailValidation } from "../utils/emailValidation"
-import { emptyValidation } from "../utils/emptyValidation"
+import {
+    nameValidation,
+    emailValidation,
+    messageValidation,
+} from "../utils/formValidation"
 
 const ContactUs = () => {
     const [formValue, setFormValue] = useState({
@@ -13,8 +16,6 @@ const ContactUs = () => {
         email: false,
         message: false,
     })
-    const [showEmptyError, setShowEmptyError] = useState(false)
-    const [showEmailError, setShowEmailError] = useState(false)
 
     return (
         <div>
@@ -30,14 +31,16 @@ const ContactUs = () => {
                         onChange={(e) => {
                             setFormValue({
                                 ...formValue,
-                                [e.target.name]: emptyValidation(
-                                    e.target.value,
-                                    setShowEmptyError
-                                ),
+                                [e.target.name]: e.target.value,
                             })
+                            nameValidation(
+                                e.target.value,
+                                showError,
+                                setShowError
+                            )
                         }}
                     />
-                    {showEmptyError && (
+                    {showError.name && (
                         <div className="text-red-500">
                             This field is required
                         </div>
@@ -54,15 +57,16 @@ const ContactUs = () => {
                         onChange={(e) => {
                             setFormValue({
                                 ...formValue,
-                                [e.target.name]: emailValidation(
-                                    e.target.value,
-                                    showError,
-                                    setShowError
-                                ),
+                                [e.target.name]: e.target.value,
                             })
+                            emailValidation(
+                                e.target.value,
+                                showError,
+                                setShowError
+                            )
                         }}
                     />
-                    {showEmailError && (
+                    {showError.email && (
                         <div className="text-red-500">
                             Invalid email address
                         </div>
@@ -79,14 +83,16 @@ const ContactUs = () => {
                         onChange={(e) => {
                             setFormValue({
                                 ...formValue,
-                                [e.target.name]: emptyValidation(
-                                    e.target.value,
-                                    setShowEmptyError
-                                ),
+                                [e.target.name]: e.target.value,
                             })
+                            messageValidation(
+                                e.target.value,
+                                showError,
+                                setShowError
+                            )
                         }}
                     />
-                    {showEmptyError && (
+                    {showError.message && (
                         <div className="text-red-500">
                             This field is required
                         </div>
