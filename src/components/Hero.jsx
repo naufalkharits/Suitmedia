@@ -27,11 +27,11 @@ const Hero = () => {
                 />
             </SwiperSlide>
             <SwiperSlide className="relative">
-                <div className="absolute bottom-16 block w-96 bg-black bg-opacity-50 p-2 font-bold text-white md:bottom-24 md:left-8 md:w-[30rem] md:text-xl lg:left-16 xl:left-32 2xl:left-64">
+                <div className="absolute left-4 bottom-16 block w-96 bg-black bg-opacity-50 p-2 font-bold text-white md:bottom-24 md:left-8 md:w-[30rem] md:text-xl lg:left-16 xl:left-32 2xl:left-64">
                     WE DON'T HAVE THE BEST BUT WE HAVE THE GRATEST TEAM
                 </div>
                 <img
-                    className="h-96 w-full object-cover object-center"
+                    className="h-96 w-full object-cover object-center xl:h-[28rem] 2xl:h-[30rem] 3xl:h-[32rem]"
                     src={about_bg}
                     alt=""
                 />
