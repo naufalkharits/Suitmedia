@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.swiper-pagination-bullet {
-    @apply bg-white !important;
+.swiper-button-prev,
+.swiper-button-next {
+    @apply text-white !important;
 }
 
+.swiper-pagination-bullet,
 .swiper-pagination-bullet-active {
     @apply bg-white !important;
 }
