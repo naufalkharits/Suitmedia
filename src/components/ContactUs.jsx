@@ -8,6 +8,11 @@ const ContactUs = () => {
         email: "",
         message: "",
     })
+    const [showError, setShowError] = useState({
+        name: false,
+        email: false,
+        message: false,
+    })
     const [showEmptyError, setShowEmptyError] = useState(false)
     const [showEmailError, setShowEmailError] = useState(false)
 
@@ -51,7 +56,8 @@ const ContactUs = () => {
                                 ...formValue,
                                 [e.target.name]: emailValidation(
                                     e.target.value,
-                                    setShowEmailError
+                                    showError,
+                                    setShowError
                                 ),
                             })
                         }}

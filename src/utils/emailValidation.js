@@ -1,8 +1,8 @@
 const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
-export const emailValidation = (email, setShowEmailError) => {
+export const emailValidation = (email, showError, setShowError) => {
     if (!emailFormat.test(email)) {
-        return setShowEmailError(true)
+        return setShowError({ ...showError, email: true })
     }
-    return setShowEmailError(false)
+    return setShowError({ ...showError, email: true })
 }
